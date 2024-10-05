@@ -1,5 +1,4 @@
-import React, { useLayoutEffect } from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, ScrollView } from "react-native";
 import { Box, Center, Text, Image } from "@gluestack-ui/themed";
 import { useNavigation } from "@react-navigation/native";
 
@@ -7,6 +6,7 @@ const ShowMovieDetailsContainer = ({ navigation, route }) => {
   const { title, image, popularity, releaseDate, overview } = route.params;
 
   return (
+    <ScrollView contentContainerStyle={styles.scrollContainer}>
     <Box width="100%" px={10}>
       <Center>
         <Text style={styles.title}>{title}</Text>
@@ -22,12 +22,18 @@ const ShowMovieDetailsContainer = ({ navigation, route }) => {
         </Text>
       </Center>
     </Box>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
+  scrollContainer: {
+    flexGrow: 1, 
+    paddingVertical: 0,
+    paddingHorizontal: 0,
+  },
   title: {
-    marginTop: 20,
+    // marginTop: 15,
     marginBottom: 20,
     fontWeight: "bold",
     fontSize: 22,

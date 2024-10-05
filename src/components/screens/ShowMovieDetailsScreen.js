@@ -1,4 +1,4 @@
-import ShowMovieDetailsContainer from "../containers/ShowMovieDetailsContainer"
+import ShowMovieDetailsContainer from "../containers/ShowDetailsContainer"
 
 const ShowMovieDetailsScreen = ({ navigation, route }) => (
   <ShowMovieDetailsContainer navigation={navigation} route={route} />

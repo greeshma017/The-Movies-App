@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet } from "react-native";
 import { fetchMovies } from "../../services/api";
 import Loading from "../layouts/Loading";
 import MoviesList from "../lists/ShowList";
-import SelectMovieType from "../forms/SelectMovieType";
+import SelectTVShowType from "../forms/SelectTVShowType";
 import { Box } from "@gluestack-ui/themed";
 
 const Movies = ({ navigation }) => {
   const [isLoading, setIsLoading] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState("now_playing");
-  const [movies, setMovies] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("popular");
+  const [tvShows, setTvShows] = useState([]);
 
   useEffect(() => {
     setIsLoading(true);
-    fetchMovies("movie", selectedCategory)
+    fetchMovies("tv", selectedCategory)
       .then((response) => {
-        setMovies(response.data.results);
+        setTvShows(response.data.results);
+        console.log("response" + response.data.results);
         setIsLoading(false);
       })
       .catch((error) => {
@@ -30,14 +31,14 @@ const Movies = ({ navigation }) => {
 
   return (
     <Box style={styles.container}>
-      <SelectMovieType
+      <SelectTVShowType
         onInputChange={handleInputChange}
         selectedCategory={selectedCategory}
       />
       {isLoading ? (
         <Loading />
       ) : (
-        <MoviesList navigation={navigation} shows={movies} />
+        <MoviesList navigation={navigation} shows={tvShows} />
       )}
     </Box>
   );

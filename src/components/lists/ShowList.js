@@ -2,10 +2,11 @@ import React from "react";
 import { FlatList, TouchableOpacity, StyleSheet } from "react-native";
 import { Card, Image, Text, Box } from "@gluestack-ui/themed";
 
-const MoviesContainer = ({ navigation, movies }) => {
+const MoviesContainer = ({ navigation, shows }) => {
   return (
+    <Box style={styles.wrap}>
     <FlatList
-      data={movies}
+      data={shows}
       renderItem={({ item }) => (
         <Card style={styles.card}>
           <Image
@@ -41,6 +42,7 @@ const MoviesContainer = ({ navigation, movies }) => {
         </Card>
       )}
     />
+    </Box>
   );
 };
 
