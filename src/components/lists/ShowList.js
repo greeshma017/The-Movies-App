@@ -2,7 +2,7 @@ import React from "react";
 import { FlatList, TouchableOpacity, StyleSheet } from "react-native";
 import { Card, Image, Text, Box } from "@gluestack-ui/themed";
 
-const MoviesContainer = ({ navigation, shows }) => {
+const ShowList = ({ navigation, shows }) => {
   return (
     <Box style={styles.wrap}>
     <FlatList
@@ -91,4 +91,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MoviesContainer;
+export default ShowList;

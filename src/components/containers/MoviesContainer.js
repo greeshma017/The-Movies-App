@@ -6,7 +6,7 @@ import MoviesList from "../lists/ShowList";
 import SelectMovieType from "../forms/SelectMovieType";
 import { Box } from "@gluestack-ui/themed";
 
-const Movies = ({ navigation }) => {
+const MoviesContainer = ({ navigation }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("now_playing");
   const [movies, setMovies] = useState([]);
@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Movies;
+export default MoviesContainer;
