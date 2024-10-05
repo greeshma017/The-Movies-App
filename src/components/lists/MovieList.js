@@ -1,6 +1,6 @@
 import React from "react";
-import { FlatList, View, TouchableOpacity, StyleSheet } from "react-native";
-import { Card, Image, Text } from "@gluestack-ui/themed";
+import { FlatList, TouchableOpacity, StyleSheet } from "react-native";
+import { Card, Image, Text, Box } from "@gluestack-ui/themed";
 
 const MoviesContainer = ({ navigation, movies }) => {
   return (
@@ -15,7 +15,7 @@ const MoviesContainer = ({ navigation, movies }) => {
             }}
             alt="posture image"
           />
-          <View style={styles.sub_wrap}>
+          <Box style={styles.sub_wrap}>
             <Text style={styles.title}>
               {item.title ? item.title : item.name}
             </Text>
@@ -37,7 +37,7 @@ const MoviesContainer = ({ navigation, movies }) => {
             >
               <Text style={styles.buttonText}>More Details</Text>
             </TouchableOpacity>
-          </View>
+          </Box>
         </Card>
       )}
     />

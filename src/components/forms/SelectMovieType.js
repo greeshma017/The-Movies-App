@@ -11,14 +11,14 @@ import {
   SelectItem,
   Icon,
   ChevronDownIcon,
-  View,
+  Box,
 } from "@gluestack-ui/themed";
 import { StyleSheet } from "react-native";
 
 const SelectMovieType = ({ onInputChange, selectedCategory }) => {
     
   return (
-    <View style={styles.container}>
+    <Box style={styles.container}>
       <Select
         value={selectedCategory}
         onValueChange={onInputChange}
@@ -43,7 +43,7 @@ const SelectMovieType = ({ onInputChange, selectedCategory }) => {
           </SelectContent>
         </SelectPortal>
       </Select>
-    </View>
+    </Box>
   );
 };
 

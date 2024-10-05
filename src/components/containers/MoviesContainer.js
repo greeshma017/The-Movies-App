@@ -4,6 +4,7 @@ import { fetchMovies } from '../../services/api';
 import Loading from "../layouts/Loading";
 import MoviesList from "../lists/MovieList";
 import SelectMovieType from "../forms/SelectMovieType";
+import { Box } from '@gluestack-ui/themed';
 
 const Movies = ({ navigation }) => {
     const [isLoading, setIsLoading] = useState(false);
@@ -32,10 +33,10 @@ const Movies = ({ navigation }) => {
     
 
     return (
-        <View style={styles.container}>
+        <Box style={styles.container}>
             <SelectMovieType onInputChange={handleInputChange} selectedCategory={selectedCategory} />
             {isLoading ? <Loading /> : <MoviesList navigation={navigation} movies={movies} />}
-        </View>
+        </Box>
     );
 };
 
