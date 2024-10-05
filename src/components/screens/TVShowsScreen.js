@@ -1,12 +1,13 @@
-import { View, Text } from 'react-native';
 
+import { View } from 'react-native';
+import TVShowsContainer from "../containers/TVShowsContainer";
 
 const TVShowsScreen = ({ navigation }) => {
-    return (
-        <View>
-            <Text>Welcome to the TVShowsScreen!</Text>
-        </View>
-    );
+  return (
+    <View>
+      <TVShowsContainer navigation={navigation} />
+    </View>
+  );
 };
 
 export default TVShowsScreen;

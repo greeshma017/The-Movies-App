@@ -5,7 +5,7 @@ import MoviesContainer from "../containers/MoviesContainer";
 const MoviesScreen = ({ navigation }) => {
   return (
     <View>
-      <MoviesContainer navigation={navigation} width="100%" />
+      <MoviesContainer navigation={navigation} />
     </View>
   );
 };
