@@ -1,12 +1,14 @@
-import { View, Text } from 'react-native';
 
+import { View } from 'react-native';
+import SearchContainer from "../containers/SearchContainer";
 
 const SearchScreen = ({ navigation }) => {
-    return (
-        <View>
-            <Text>Welcome to the SearchScreen!</Text>
-        </View>
-    );
+  return (
+    <View>
+      <SearchContainer navigation={navigation} />
+    </View>
+  );
 };
 
 export default SearchScreen;
+

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { StyleSheet } from "react-native";
 import { fetchMovies } from "../../services/api";
 import Loading from "../layouts/Loading";
-import MoviesList from "../lists/ShowList";
+import ShowList from "../lists/ShowList";
 import SelectTVShowType from "../forms/SelectTVShowType";
 import { Box } from "@gluestack-ui/themed";
 
@@ -38,7 +38,7 @@ const Movies = ({ navigation }) => {
       {isLoading ? (
         <Loading />
       ) : (
-        <MoviesList navigation={navigation} shows={tvShows} />
+        <ShowList navigation={navigation} shows={tvShows} />
       )}
     </Box>
   );

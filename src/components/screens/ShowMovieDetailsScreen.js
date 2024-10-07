@@ -1,7 +1,7 @@
-import ShowMovieDetailsContainer from "../containers/ShowDetailsContainer"
+import ShowDetailsContainer from "../containers/ShowDetailsContainer"
 
 const ShowMovieDetailsScreen = ({ navigation, route }) => (
-  <ShowMovieDetailsContainer navigation={navigation} route={route} />
+  <ShowDetailsContainer navigation={navigation} route={route} />
 )
 
 export default ShowMovieDetailsScreen;
